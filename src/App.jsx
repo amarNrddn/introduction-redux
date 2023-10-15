@@ -1,17 +1,12 @@
-import AddProduct from "./pages/addProduct/AddProduct"
-import ShowProduct from "./pages/showProduct/ShowProduct"
+import { BrowserRouter } from "react-router-dom"
+import AppRoutes from "./routes/AppRoutes"
 
 function App() {
 
   return (
-    <div className="flex justify-center">
-      <div className="w-[50%] text-center">
-        <AddProduct />
-      </div>
-      <div className="w-[50%] text-center">
-        <ShowProduct />
-      </div>
-    </div>
+    <BrowserRouter>
+      <AppRoutes/>
+    </BrowserRouter>
   )
 }
 
