@@ -1,41 +1,32 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { update } from "../../redux/features/addProduct"
+import { createProduct } from "../../redux/features/addProduct"
+import { useNavigate } from "react-router-dom"
+import Form from './Form'
 
 const AddProduct = () => {
     const dispatch = useDispatch()
-    const [form, setForm] = useState({
+    const navigate = useNavigate()
+    const [form,setForm] = useState({
         title: "",
         price: ""
     })
 
     const hendleOnchange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value })
+        setForm({...form, [e.target.name]: e.target.value})
     }
 
-    const hendleSubmit = () => {
-        dispatch(update({...form}))
-
-        console.log(form)
+    const hendleSubmit = async (e) => {
+        e.preventDefault()
+        await dispatch(createProduct({...form}))
+        navigate("/")
     }
     return (
         <div className="">
             <div className="">
-                <p>Masukan Title</p>
-                <input
-                    className=""
-                    name="title"
-                    value={form.title}
-                    onChange={hendleOnchange}
-                />
-            </div>
-            <div className="">
-                <p>Masukan Title</p>
-                <input
-                    className=""
-                    name="price"
-                    value={form.price}
-                    onChange={hendleOnchange}
+                <Form 
+                    form={form}
+                    hendleOnchange={hendleOnchange}
                 />
             </div>
             <button

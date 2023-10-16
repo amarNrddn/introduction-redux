@@ -1,13 +1,26 @@
-import InputText from "../../components/InputText/InputText"
+/* eslint-disable react/prop-types */
+import InputText from '../../components/InputText/InputText'
 
-const form = ({ form }) => {
+const Form = ({ form, hendleOnchange }) => {
     return (
-        <div>
+        <div className='flex flex-col'>
+              <p>Masukan Title</p> 
             <InputText
                 value={form.title}
+                name={"title"}
+                placeholder={"Nama Produk"}
+                onChange={hendleOnchange}
+            />
+
+            <p>Masukan Price</p>    
+            <InputText
+                value={form.price}
+                name={"price"}
+                placeholder={"price"}
+                onChange={hendleOnchange}
             />
         </div>
     )
 }
 
-export default form
+export default Form
