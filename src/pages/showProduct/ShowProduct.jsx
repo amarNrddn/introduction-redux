@@ -1,6 +1,6 @@
 import { useSelector, } from "react-redux/es/hooks/useSelector"
 import { useDispatch } from "react-redux"
-import { getProduct, productSelector } from "../../redux/features/addProduct"
+import { getProduct, productSelector,deleteProduct } from "../../redux/features/addProduct"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
@@ -34,7 +34,7 @@ const ShowProduct = () => {
                             <td>{product.price}</td>
                             <td>
                                 <button>Edit</button>
-                                <button>Delete</button>
+                                <button onClick={() => dispatch(deleteProduct(product.id))}>Delete</button>
                             </td>
                         </tr>
                     ))}
