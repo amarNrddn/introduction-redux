@@ -1,0 +1,1 @@
+export const Thead = ["No", "Nama Prodak", "Harga", "Action"]

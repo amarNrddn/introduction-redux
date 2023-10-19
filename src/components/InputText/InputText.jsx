@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react"
+import { Input } from "@material-tailwind/react";
 
 const InputText = ({
     className,
@@ -16,7 +17,7 @@ const InputText = ({
     type
 }) => {
     return (
-        <input
+        <Input
             className={className}
             type={type}
             name={name}

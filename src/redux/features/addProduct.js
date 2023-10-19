@@ -1,5 +1,5 @@
-import { createSlice, createAsyncThunk, createEntityAdapter } from "@reduxjs/toolkit";
 import axios from "axios";
+import { createSlice, createAsyncThunk, createEntityAdapter } from "@reduxjs/toolkit";
 
 export const getProduct = createAsyncThunk("product/getProduct", async() => {
     const res = await axios.get("http://localhost:5000/product")
@@ -13,7 +13,7 @@ export const createProduct = createAsyncThunk("product/createProduct", async({..
     return res.data
 })
 
-export const updateProduct = createAsyncThunk("product/updateProduct", async(id, ...form) => {
+export const updateProduct = createAsyncThunk("product/updateProduct", async({id, ...form}) => {
     const res = await axios.patch(`http://localhost:5000/product/${id}`, {
         ...form
     })
