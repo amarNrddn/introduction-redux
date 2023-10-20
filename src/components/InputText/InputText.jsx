@@ -12,9 +12,9 @@ const InputText = ({
     placeholder,
     // eslint-disable-next-line react/prop-types
     onChange,
-
     // eslint-disable-next-line react/prop-types
-    type
+    type, 
+    label
 }) => {
     return (
         <Input
@@ -24,6 +24,7 @@ const InputText = ({
             value={value}
             onChange={onChange}
             placeholder={placeholder}
+            label={label}
         />
     )
 }

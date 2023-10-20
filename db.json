@@ -1,11 +1,6 @@
 {
   "product": [
     {
-      "title": "baju",
-      "price": "123",
-      "id": 4
-    },
-    {
       "title": "piring",
       "price": "123",
       "id": 5
@@ -14,6 +9,11 @@
       "title": "kemeja Hitam",
       "price": "500",
       "id": 6
+    },
+    {
+      "title": "TWS",
+      "price": "5000",
+      "id": 7
     }
   ]
 }

@@ -58,7 +58,7 @@ const ShowProduct = () => {
                                 </td>
                                 <td className="p-4">
                                     <Typography variant="small" color="blue-gray" className="font-normal">
-                                        {product.price}
+                                        Rp.{product.price}
                                     </Typography>
                                 </td>
                                 <td className="p-4">

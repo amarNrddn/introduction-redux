@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { createProduct } from "../../redux/features/addProduct"
 import { useNavigate } from "react-router-dom"
 import Form from './Form'
+import RButton from "../../components/Button/RButton"
 
 const AddProduct = () => {
     const dispatch = useDispatch()
@@ -22,18 +23,19 @@ const AddProduct = () => {
         navigate("/")
     }
     return (
-        <div className="">
+        <div className="w-full flex flex-col justify-center items-center pt-5">
             <div className="">
                 <Form 
                     form={form}
                     hendleOnchange={hendleOnchange}
                 />
             </div>
-            <button
-                onClick={hendleSubmit}
-                className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ...">
+            <RButton
+                action={hendleSubmit}
+                color={"blue"}
+                >
                 Save
-            </button>
+            </RButton>
         </div>
     )
 }

@@ -4,7 +4,6 @@ import InputText from '../../components/InputText/InputText'
 function Form({ form, hendleOnchange }) {
     return (
         <div className='w-full flex justify-center'>
-
             <div className='w-72 flex flex-col'>
                 <div className="mb-2">
                     <p>Nama Product</p>
@@ -16,7 +15,7 @@ function Form({ form, hendleOnchange }) {
                         className={"w-72"}
                     />
                 </div>
-                    
+
                 <div className="mb-2">
                     <p>Harga Product</p>
                     <InputText

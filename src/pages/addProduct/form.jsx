@@ -3,22 +3,26 @@ import InputText from '../../components/InputText/InputText'
 
 const Form = ({ form, hendleOnchange }) => {
     return (
-        <div className='flex flex-col'>
-              <p>Masukan Title</p> 
-            <InputText
-                value={form.title}
-                name={"title"}
-                placeholder={"Nama Produk"}
-                onChange={hendleOnchange}
-            />
+        <div className='w-full flex flex-col justify-center'>
+            <div className='w-72 flex flex-col'>
+                <div className="mb-2">
+                    <InputText
+                        label={"masukan Produk"}
+                        value={form.title}
+                        name={"title"}
+                        onChange={hendleOnchange}
+                    />
+                </div>
+            </div>
 
-            <p>Masukan Price</p>    
-            <InputText
-                value={form.price}
-                name={"price"}
-                placeholder={"price"}
-                onChange={hendleOnchange}
-            />
+            <div className="mb-2">
+                <InputText
+                    label={"masukan Harga"}
+                    value={form.price}
+                    name={"price"}
+                    onChange={hendleOnchange}
+                />
+            </div>
         </div>
     )
 }
